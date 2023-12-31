@@ -11,4 +11,4 @@ It is a library for building single page web application.
 - jQuery & React.js are exameples for library and vue.js and angular for frameworks.
 
 ### create-react-app
-it is a wrapper around react that comes with necessary tools to run a react application with a single command. This is not react rather an environment/setup that comes equiped with all the necessary tools the start running a react app. It provides a predefined folder structure and comes with in-built webpack to compile apps on the runs.
+it is a wrapper around react that comes with necessary tools to run a react application with a single command. This is not react rather an environment/setup that comes equiped with all the necessary tools the start running a react app. It provides a predefined folder structure and comes with in-built webpack to compile apps on the runs. It also comes with a built-in testing
