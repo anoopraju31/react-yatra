@@ -20,3 +20,10 @@
     - Tlida(~)
         - If the version number starts with a tilde (~), it means that the package manager is allowed to update to the latest compatible patch version. It won't update to a new minor or major version.
         - For example, if you have "mocha": "~8.4.0", it means that npm can install any version from 8.4.0 up to, but not including, 8.5.0.
+
+### What does Bundlers
+- Compiles the react code to JavaScript
+- Code Minification
+- Memory Optimizations
+- Reading files from node_modules
+- Compiling CSS
