@@ -37,3 +37,26 @@
         import {App} from './App'
     ```
     - Named import is used when we want to import a specific variables, functions or classes from the module by their exact names.  
+
+### children
+- In React, "children" refers to the components, elements, or content that are nested within the opening and closing tags of a parent component.
+
+``` jsx
+    const ParentComponent = ({ children }) => {
+        return (
+            <div>
+                <h2>Parent Component</h2>
+                {children}
+            </div>
+        );
+    };
+
+    const App = () => {
+        return (
+            <ParentComponent>
+                <p>This is a child component.</p>
+                <p>Another child component.</p>
+            </ParentComponent>
+        );
+    };
+```
