@@ -11,3 +11,25 @@
 - Under the hood JSX is converted into React Element.
 - JSX is a Syntactic sugar, meaning it was introduction for a better developer experience.
 - JSX provides a structured way to create React Elements make it easy to keep track of elements.
+
+#### Rendering values dynamically in JSX.
+
+``` jsx
+    
+        const API_DATA = 'Hello World, Happy New Year'
+		const paragraph = <p className='text'> {API_DATA} </p>
+
+```
+
+#### Conditional Rendering in JSX
+
+``` jsx
+    
+    const isMorning = new Date().getHours() < 12
+    const greeting = (
+        <div>
+            {isMorning && <p> Good Morning! </p>}
+        </div>
+    )
+
+```
