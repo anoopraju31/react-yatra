@@ -11,5 +11,9 @@ const div = (
 	</div>
 )
 
+const Greetings = function () {
+	return div
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(div)
+root.render(Greetings())

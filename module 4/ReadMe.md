@@ -24,7 +24,7 @@
 #### Conditional Rendering in JSX
 
 ``` jsx
-    
+
     const isMorning = new Date().getHours() < 12
     const greeting = (
         <div>
@@ -33,3 +33,23 @@
     )
 
 ```
+
+### Components
+- Components are independent and reusable bits of code. 
+- A functional Component in React is a function that returns a React Element. In short a function that returns some JSX.
+
+``` jsx
+
+    const Greeting = fucntion() {
+        return (
+            <div>
+                <p> Good Morning! </p>
+            </div>
+        )
+    }
+
+```
+
+### Element vs Component
+- In React, an element is the smallest building block while the component is a reusable piece of the code.
+- The element contains the information to be rendered on the UI and the Components are composed of the elements.
