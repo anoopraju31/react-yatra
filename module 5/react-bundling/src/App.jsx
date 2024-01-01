@@ -2,9 +2,11 @@ import React from 'react'
 import Button from './components/Button.jsx'
 
 const App = () => {
+	const handleClick = () => alert('Clicked Me!')
+
 	return (
 		<div>
-			<Button> Click Me </Button>
+			<Button handleClick={handleClick}> Click Me </Button>
 		</div>
 	)
 }
