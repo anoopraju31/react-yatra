@@ -35,7 +35,17 @@
 - A functional Component in React is a function that returns a React Element. In short a function that returns some JSX.
 
 ``` jsx
-    const Greeting = fucntion() {
+    const Greeting = function() {
+        return (
+            <div>
+                <p> Good Morning! </p>
+            </div>
+        )
+    }
+```
+
+``` jsx
+    const Greeting = () => {
         return (
             <div>
                 <p> Good Morning! </p>
