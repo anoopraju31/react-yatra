@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+const API_DATA = 'Hello World, Happy New Year'
+
 const div = (
 	<div>
-		<p className='text'> Happy New Year </p>
+		<p className='text'> {API_DATA} </p>
 	</div>
 )
 
