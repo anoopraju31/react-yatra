@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Text = ({ text }) => {
-	return <p>{text}</p>
+	const [date, setDate] = useState(new Date())
+	console.log(text)
+	return (
+		<p>
+			{text} - {date.getTime()}
+		</p>
+	)
 }
 
 export default Text
