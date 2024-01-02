@@ -72,35 +72,35 @@ In React, state variables are used to store and manage the local state of a comp
 1. **Directly modifying state**:
     ``` jsx 
         // Incorrect
-        this.state.count = this.state.count + 1;
+        state.count = state.count + 1;
     ```
     State should never be modified directly. Instead, use the setState method provided by React to update the state:
     ``` jsx 
         // Correct
-        this.setState({ count: this.state.count + 1 });
+        setState({ count: state.count + 1 });
     ```
 2. **Asynchronous state updates**:
     ``` jsx 
         // Incorrect
-        this.setState({ count: this.state.count + 1 });
-        console.log(this.state.count); // The updated count may not be reflected here
+        setState({ count: state.count + 1 });
+        console.log(state.count); // The updated count may not be reflected here
     ```
     **setState** is asynchronous, so if you need to perform an action after the state is updated, use the callback function:
     ``` jsx 
         // Correct
-        this.setState({ count: this.state.count + 1 }, () => {
-            console.log(this.state.count);
+        setState({ count: state.count + 1 }, () => {
+            console.log(state.count);
         });
     ```
 3. **Not accounting for the previous state**:
     ``` jsx 
         // Incorrect
-        this.setState({ count: this.state.count + 1 });
+        setState({ count: state.count + 1 });
     ```
     When updating state based on the current state, use the function form of **setState** to ensure you are working with the latest state:
     ``` jsx 
         // Correct
-        this.setState((prevState) => ({ count: prevState.count + 1 }));
+        setState((prevState) => ({ count: prevState.count + 1 }));
     ```
 4. **Unnecessary re-renders**:
     Avoid creating unnecessary objects in the render method that may cause re-renders, especially for functional components and components that don't need to re-render:
@@ -118,6 +118,3 @@ In React, state variables are used to store and manage the local state of a comp
     Having too many state variables in a component can make the code complex and harder to manage. Consider breaking down the component into smaller, more focused components with their own state.
 7. **Not lifting state up**:
     If multiple components need to share the same state, consider lifting the state up to a common ancestor rather than duplicating the state in multiple components.
-
-    ``` jsx 
-    ```
