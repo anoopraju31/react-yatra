@@ -1,4 +1,4 @@
 # Module 10
 
-### Topics to cover:
+### Topics to be cover:
 - **All about useLayoutEffect**
