@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
-import SecondParent from './components/SecondParent.jsx'
+import PrintTable from './components/PrintTable.jsx'
 
 const App = () => {
-	const [count, setCount] = useState(0)
-	const myFunction = () => {
-		//
+	const [counter1, setCounter1] = useState(0)
+	const [counter2, setCounter2] = useState(0)
+
+	const incrementCounter1 = () => {
+		setCounter1((prev) => prev + 1)
+	}
+
+	const incrementCounter2 = () => {
+		setCounter2((prev) => prev + 1)
 	}
 
 	return (
@@ -13,10 +19,17 @@ const App = () => {
 				background: '#0f3',
 				padding: '20px',
 			}}>
-			<h1> The outermost Parent </h1>
-			<p>{count}</p>
-			<button onClick={() => setCount((prev) => prev + 1)}> Increment </button>
-			<SecondParent />
+			<p>
+				{' '}
+				Counter: {counter1}{' '}
+				<button onClick={incrementCounter1}> Increment Counter 1 </button>
+			</p>
+			<p>
+				{' '}
+				Counter: {counter2}{' '}
+				<button onClick={incrementCounter2}> Increment Counter 2 </button>
+			</p>
+			<PrintTable num={counter1} />
 		</div>
 	)
 }
