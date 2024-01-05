@@ -29,19 +29,35 @@
 11. Module 11 
     - All about useRef Hook 
     - forwardRef API
-12. All about useCallback 
-13. All about useMemo Hook 
-14. Understanding Memo API 
-15. React Optimization via Lazy API and Suspense Component 
-16. React createContext API and useContext hook 
-17. Introduction to createPortal in react-dom 
-18. Introduction to Redux and Redux-toolkit 
-19. Introduction to React Router 
-20. What are React Design Patterns? 
-21. React HOC (Higher Order Component) Design Pattern 
-22. React Render Props Pattern 
-23. React Composition or Compound Pattern 
-24. React Custom Hook Pattern 
-25. How to fetch data from an API and Image Optimizations 
-26. Dealing with input form and optimizations 
-27. How to style components in React
+12. Module 12
+    - All about useCallback 
+13. Module 13
+    - All about useMemo Hook 
+14. Module 14
+    - Understanding Memo API 
+15. Module 15
+    - React Optimization via Lazy API and Suspense Component 
+16. Module 16
+    - React createContext API and useContext hook 
+17. Module 17
+    - Introduction to createPortal in react-dom 
+18. Module 18
+    - Introduction to Redux and Redux-toolkit 
+19. Module 19
+    - Introduction to React Router 
+20. Module 20
+    - What are React Design Patterns? 
+21. Module 21
+    - React HOC (Higher Order Component) Design Pattern 
+22. Module 22
+    - React Render Props Pattern 
+23. Module 23
+    - React Composition or Compound Pattern 
+24. Module 24
+    - React Custom Hook Pattern 
+25. Module 25
+    - How to fetch data from an API and Image Optimizations 
+26. Module 26
+    - Dealing with input form and optimizations 
+27. Module 27
+    - How to style components in React
