@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Button from './components/Button.jsx'
+import Input from './components/Input.jsx'
 
 const App = () => {
 	const [timer, setTimer] = useState(0)
@@ -7,6 +8,8 @@ const App = () => {
 	const countRef = useRef(0)
 	const timerRef = useRef(null)
 	const headingRef = useRef(null)
+	const inputRef = useRef(null)
+	const paragraphRef = useRef(null)
 	let countLocal = 0
 
 	const handleCountRef = () => {
@@ -27,6 +30,14 @@ const App = () => {
 	useEffect(() => {
 		console.log('ref change', timerRef)
 	}, [timerRef])
+
+	useEffect(() => {
+		if (!inputRef.current) return
+
+		paragraphRef.current.innerText = JSON.stringify(
+			inputRef.current.getBoundingClientRect(),
+		)
+	}, [inputRef])
 
 	const handleClearTimer = () => {
 		console.log(timerRef.current)
@@ -52,6 +63,8 @@ const App = () => {
 			<p> state count: {count} </p>
 			<p> Timer: {timer}</p>
 			<h1 ref={headingRef}> Heading </h1>
+			<p ref={paragraphRef}></p>
+			<Input ref={inputRef} />
 		</div>
 	)
 }
