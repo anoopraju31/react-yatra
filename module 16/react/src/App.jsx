@@ -1,31 +1,20 @@
-import React, { useState, lazy, Suspense } from 'react'
-// import Text from './components/Text.jsx'
-
-const Text = lazy(() => delayForDemo(import('./components/Text.jsx')))
+import React, { useState } from 'react'
+import Heading from './components/Heading.jsx'
+import ThemeContext from './components/context.js'
+import Navbar from './components/Navbar.jsx'
 
 const App = () => {
-	const [showText, setShowText] = useState(false)
-
+	const [theme, setTheme] = useState('light')
+	const headingText = 'rgjiogjwripgtjpro'
+	const toggleTheme = () => {
+		setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))
+	}
 	return (
-		<div>
-			<button onClick={() => setShowText((prev) => !prev)}>
-				{' '}
-				Toggle Text{' '}
-			</button>
-			{showText && (
-				<Suspense fallback={<p>loading...</p>}>
-					<Text text='Hello, How are you?' />
-				</Suspense>
-			)}
-		</div>
+		<ThemeContext.Provider value={{ theme, toggleTheme }}>
+			<Navbar />
+			<Heading headingText={headingText} />
+		</ThemeContext.Provider>
 	)
-}
-
-// Add a fixed delay so you can see the loading state
-function delayForDemo(promise) {
-	return new Promise((resolve) => {
-		setTimeout(resolve, 2000)
-	}).then(() => promise)
 }
 
 export default App
