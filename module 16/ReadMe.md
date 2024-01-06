@@ -17,23 +17,23 @@
 ### React Context API
 1. **Create a Context**:
 - Use the **createContext** function to create a context. This function returns two components: **Provider** and **Consumer** (or we can use the **useContext** hook to consume the context).
-``` jsx
-    import React, { createContext } from 'react'
+    ``` jsx
+        import React, { createContext } from 'react'
 
-    const MyContext = createContext()
-```
+        const MyContext = createContext()
+    ```
 2. **Provide the Context Value**:
 - Wrap the part of the component tree that needs access to the context with the **Provider** component.
 - Pass the data that needed to be shared through the **value** props.
-``` jsx
-    const MyComponent = () => {
-        return (
-            <MyContext.Provider value={{/* pass date here */}}>
-            {/* The components that needs to access the context */}
-            </MyComponent.Provider>
-        )
-    }
-``` 
+    ``` jsx
+        const MyComponent = () => {
+            return (
+                <MyContext.Provider value={{/* pass date here */}}>
+                {/* The components that needs to access the context */}
+                </MyComponent.Provider>
+            )
+        }
+    ``` 
 3. **Consume the Context**:
 - Use the **Consumer** component or the **useContext** hook to consume the context within components.
 - Using **Consumer** component:
