@@ -1,37 +1,31 @@
-import React, { useState } from 'react'
-import PrintTable from './components/PrintTable.jsx'
+import React, { useState, lazy, Suspense } from 'react'
+// import Text from './components/Text.jsx'
+
+const Text = lazy(() => delayForDemo(import('./components/Text.jsx')))
 
 const App = () => {
-	const [counter1, setCounter1] = useState(0)
-	const [counter2, setCounter2] = useState(0)
-
-	const incrementCounter1 = () => {
-		setCounter1((prev) => prev + 1)
-	}
-
-	const incrementCounter2 = () => {
-		setCounter2((prev) => prev + 1)
-	}
+	const [showText, setShowText] = useState(false)
 
 	return (
-		<div
-			style={{
-				background: '#0f3',
-				padding: '20px',
-			}}>
-			<p>
+		<div>
+			<button onClick={() => setShowText((prev) => !prev)}>
 				{' '}
-				Counter: {counter1}{' '}
-				<button onClick={incrementCounter1}> Increment Counter 1 </button>
-			</p>
-			<p>
-				{' '}
-				Counter: {counter2}{' '}
-				<button onClick={incrementCounter2}> Increment Counter 2 </button>
-			</p>
-			<PrintTable num={counter1} />
+				Toggle Text{' '}
+			</button>
+			{showText && (
+				<Suspense fallback={<p>loading...</p>}>
+					<Text text='Hello, How are you?' />
+				</Suspense>
+			)}
 		</div>
 	)
+}
+
+// Add a fixed delay so you can see the loading state
+function delayForDemo(promise) {
+	return new Promise((resolve) => {
+		setTimeout(resolve, 2000)
+	}).then(() => promise)
 }
 
 export default App
