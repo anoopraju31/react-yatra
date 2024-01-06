@@ -1,0 +1,1 @@
+# Module 15 - React Optimization via Lazy API and Suspense Component
