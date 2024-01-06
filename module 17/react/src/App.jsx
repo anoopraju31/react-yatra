@@ -1,19 +1,32 @@
 import React, { useState } from 'react'
-import Heading from './components/Heading.jsx'
-import ThemeContext from './components/context.js'
-import Navbar from './components/Navbar.jsx'
 
 const App = () => {
-	const [theme, setTheme] = useState('light')
-	const headingText = 'rgjiogjwripgtjpro'
-	const toggleTheme = () => {
-		setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))
-	}
+	const [showModel, setShowModel] = useState(false)
 	return (
-		<ThemeContext.Provider value={{ theme, toggleTheme }}>
-			<Navbar />
-			<Heading headingText={headingText} />
-		</ThemeContext.Provider>
+		<div
+			style={{
+				overflow: showModel ? 'hidden' : 'auto',
+			}}>
+			<button onClick={() => setShowModel(true)}> Open Model </button>
+
+			{showModel && (
+				<div
+					style={{
+						margin: 0,
+						position: 'fixed',
+						top: '0px',
+						left: '0px',
+						width: '100vw',
+						height: '100vh',
+						display: 'flex',
+						justifyContent: 'center',
+						alignItems: 'center',
+						background: '#0f4',
+					}}>
+					<button onClick={() => setShowModel(false)}> Close Model </button>
+				</div>
+			)}
+		</div>
 	)
 }
 
