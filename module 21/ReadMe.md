@@ -1,0 +1,1 @@
+# Module 21 - React HOC (Higher Order Component) Pattern
